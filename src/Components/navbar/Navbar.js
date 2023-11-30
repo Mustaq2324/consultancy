@@ -13,9 +13,11 @@ function Navbar() {
   function handleActive(e) {
     sethome(true);
     setBtn(e.target.textContent);
+    setSideNav(false);
   }
   function handleHome() {
     sethome(false);
+    setSideNav(false);
     setBtn(null);
   }
   return (
@@ -105,22 +107,26 @@ function Navbar() {
         }
       >
         <ul className="flex flex-col content-center items-center gap-4 text-lg cursor-pointer font-semibold pt-10  ">
-          <li className="text-[#1369aa]">
-            <Link to="/">Home</Link>
+          <li  className={home ?"text-black":"text-[#1369aa]"}>
+            <Link  onClick={handleHome}  to="/">Home</Link>
           </li>
 
-          <li className="hover:text-[#1369AA] ">
-            <Link to="/About">About</Link>
+          <li className={
+                btn ==="About"?"text-[#1369aa]":"text-black hover:text-[#1369AA] "}>
+            <Link onClick={handleActive}  to="/About">About</Link>
           </li>
 
-          <li className="hover:text-[#1369AA]">
-            <Link to="/Client">Clients</Link>
+          <li className={
+                btn ==="Clients"?"text-[#1369aa]":"text-black hover:text-[#1369AA] "}>
+            <Link  onClick={handleActive} to="/Client">Clients</Link>
           </li>
-          <li className="hover:text-[#1369AA]">
-            <Link to="/Services">Services</Link>
+          <li className={
+                btn ==="Services"?"text-[#1369aa]":"text-black hover:text-[#1369AA] "}>
+            <Link  onClick={handleActive} to="/Services">Services</Link>
           </li>
-          <li className="hover:text-[#1369AA]">
-            <Link to="/Contact">Contact Us</Link>
+          <li className={
+                btn ==="Contact Us"?"text-[#1369aa]":"text-black hover:text-[#1369AA] "}>
+            <Link  onClick={handleActive} to="/Contact">Contact Us</Link>
           </li>
         </ul>
       </div>
