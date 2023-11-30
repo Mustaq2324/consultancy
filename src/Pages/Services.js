@@ -5,7 +5,7 @@ import img from "../img/1.png";
 import FAQ from "./Faq";
 import img3 from "../Assest/3.jpg";
 
-const locations = ["Chennai", "Bangalore", "Mumbai", "Telangana"];
+const locations = ["Chennai", "Bangalore", "Mumbai", "Telangana",'Pune','Noida','Lucknow','Hyderabad','Gurugram','Delhi'];
 
 function Services() {
   const [showApplyForm, setShowApplyForm] = useState(false);

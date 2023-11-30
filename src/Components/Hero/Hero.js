@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { LuChevronsUp } from "react-icons/lu";
 import icon from "../../../src/Assest/images.png";
 import bg from "../../Assest/bg.jpeg";
+import Services from "../../Pages/Services";
+import { Link } from "react-router-dom";
 
 export default function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -48,10 +50,10 @@ export default function App() {
           </p>
           <div className="flex flex-col justify-center md:flex-row gap-3 px-4">
             <button className="font-[DMSans] text-xl px-5 py-3 rounded bg-blue-600 hover:bg-blue-700 hover:text-white duration-300">
-              Apply Now
+            <Link  to="Services">Apply Now</Link>
             </button>
             <button className="px-5 py-3 rounded font-[DMSans] text-xl bg-gray-800 hover:bg-gray-900 hover:text-white duration-300">
-              Learn More
+               <Link  to="About"> Learn More</Link>
             </button>
           </div>
         </div>
@@ -62,7 +64,7 @@ export default function App() {
           isVisible ? "visible" : "hidden"
         }`}
       >
-        <a href="https://wa.me/qr/46QS64NVBDOAM1">
+        <a href="https://wa.me/918097061134">
           <img className="rounded-full" src={icon} alt="" />
         </a>
       </div>

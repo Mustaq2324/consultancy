@@ -200,7 +200,7 @@ function Contactus() {
               <ul className="mt-3">
                 <li className="  ">M.k Park,2nd FLoor</li>
                 <li className="  ">Room-211, Near-Noor-Ala-Noor Masjid</li>
-                <li className="  ">Naupada Bandra East,Mumbai -400056</li>
+                <li className="  ">Naupada Bandra East,Mumbai -400051</li>
               </ul>
             </div>
           </div>
