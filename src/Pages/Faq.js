@@ -30,7 +30,7 @@ const FAQ = () => {
 
 
   return (
-    <div className="flex justify-evenly">
+    <div className="flex px-4 justify-evenly flex-col lg:flex-row gap-4 items-center">
       <div className=" space-y-4 mt-12">
       <h2 className="text-2xl font-bold text-center">Frequently Asked Questions</h2>
         {faqData.map((item) => (
