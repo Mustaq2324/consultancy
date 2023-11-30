@@ -18,7 +18,6 @@ function Services() {
   const handleLocationClick = (location) => {
     setSelectedLocation(location);
   };
-
   return (
     <div className="overflow-hidden">
       <div className="bg-gradient-to-b from-[#7CB252] to-[#1369AA] h-[450px] lg:h-[400px]  ">
