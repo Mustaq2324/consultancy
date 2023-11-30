@@ -21,7 +21,7 @@ function Navbar() {
     setBtn(null);
   }
   return (
-    <div className="flex  ">
+    <div className="flex sticky top-0 bg-white z-30">
       <div className="flex justify-between p-4 lg:p-0 z-50 lg:justify-between lg:px-4 text-black items-center w-full">
         <div className="flex lg:justify-center justify-center items-center ">
           <img
