@@ -5,19 +5,18 @@ import { FaBars } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 function Navbar() {
   const [Sidenav, setSideNav] = useState(false);
-  const[btn,setBtn]=useState(null)
-  const[home,sethome]=useState(false)
+  const [btn, setBtn] = useState(null);
+  const [home, sethome] = useState(false);
   function handledrop() {
     setSideNav(!Sidenav);
   }
-  function handleActive(e){
-    sethome(true)
-    setBtn(e.target.textContent)
-    
+  function handleActive(e) {
+    sethome(true);
+    setBtn(e.target.textContent);
   }
-  function handleHome(){
-    sethome(false)
-    setBtn(null)
+  function handleHome() {
+    sethome(false);
+    setBtn(null);
   }
   return (
     <div className="flex  ">
@@ -36,23 +35,63 @@ function Navbar() {
 
         <div className="hidden lg:block ">
           <ul className="flex gap-4 text-lg cursor-pointer font-semibold">
-            <li className={home?"hover:text-[#1369AA] relative hover:after:absolute hover:after:left-0 hover:after:-bottom-3 hover:after:w-[100%] hover:after:h-[3px]  hover:after:bg-[#1369aa] ":"text-[#1369aa] relative after:absolute after:left-0 after:-bottom-3 after:w-[100%] after:h-[3px]  after:bg-[#1369aa]"}>
-             <Link onClick={handleHome}  to="/">Home</Link> 
+            <li
+              className={
+                home
+                  ? "hover:text-[#1369AA] relative hover:after:absolute hover:after:left-0 hover:after:-bottom-3 hover:after:w-[100%] hover:after:h-[3px]  hover:after:bg-[#1369aa] "
+                  : "text-[#1369aa] relative after:absolute after:left-0 after:-bottom-3 after:w-[100%] after:h-[3px]  after:bg-[#1369aa]"
+              }
+            >
+              <Link onClick={handleHome} to="/">
+                Home
+              </Link>
             </li>
-            <li className={btn==="About"?"text-[#1369aa] relative after:absolute after:left-0 after:-bottom-3 after:w-[100%] after:h-[3px]  after:bg-[#1369aa]":"hover:text-[#1369AA] relative hover:after:absolute hover:after:left-0 hover:after:-bottom-3 hover:after:w-[100%] hover:after:h-[3px]  hover:after:bg-[#1369aa] "}>
-              <Link onClick={handleActive} to="/About">About</Link>
+            <li
+              className={
+                btn === "About"
+                  ? "text-[#1369aa] relative after:absolute after:left-0 after:-bottom-3 after:w-[100%] after:h-[3px]  after:bg-[#1369aa]"
+                  : "hover:text-[#1369AA] relative hover:after:absolute hover:after:left-0 hover:after:-bottom-3 hover:after:w-[100%] hover:after:h-[3px]  hover:after:bg-[#1369aa] "
+              }
+            >
+              <Link onClick={handleActive} to="/About">
+                About
+              </Link>
             </li>
             {/* <li className="hover:text-[#1369AA] relative hover:after:absolute hover:after:left-0 hover:after:-bottom-3 hover:after:w-[100%] hover:after:h-[3px]  hover:after:bg-[#1369aa]">
             <Link to="/Services">Services</Link> 
             </li> */}
-            <li className={btn==="Clients"?"text-[#1369aa] relative after:absolute after:left-0 after:-bottom-3 after:w-[100%] after:h-[3px]  after:bg-[#1369aa]":"hover:text-[#1369AA] relative hover:after:absolute hover:after:left-0 hover:after:-bottom-3 hover:after:w-[100%] hover:after:h-[3px]  hover:after:bg-[#1369aa] "}>
-              <Link onClick={handleActive} to="/Client">Clients</Link> 
+            <li
+              className={
+                btn === "Clients"
+                  ? "text-[#1369aa] relative after:absolute after:left-0 after:-bottom-3 after:w-[100%] after:h-[3px]  after:bg-[#1369aa]"
+                  : "hover:text-[#1369AA] relative hover:after:absolute hover:after:left-0 hover:after:-bottom-3 hover:after:w-[100%] hover:after:h-[3px]  hover:after:bg-[#1369aa] "
+              }
+            >
+              <Link onClick={handleActive} to="/Client">
+                Clients
+              </Link>
             </li>
-            <li className={btn==="Services"?"text-[#1369aa] relative after:absolute after:left-0 after:-bottom-3 after:w-[100%] after:h-[3px]  after:bg-[#1369aa]":"hover:text-[#1369AA] relative hover:after:absolute hover:after:left-0 hover:after:-bottom-3 hover:after:w-[100%] hover:after:h-[3px]  hover:after:bg-[#1369aa] "}>
-            <Link onClick={handleActive} to="/Services">Services</Link> 
+            <li
+              className={
+                btn === "Services"
+                  ? "text-[#1369aa] relative after:absolute after:left-0 after:-bottom-3 after:w-[100%] after:h-[3px]  after:bg-[#1369aa]"
+                  : "hover:text-[#1369AA] relative hover:after:absolute hover:after:left-0 hover:after:-bottom-3 hover:after:w-[100%] hover:after:h-[3px]  hover:after:bg-[#1369aa] "
+              }
+            >
+              <Link onClick={handleActive} to="/Services">
+                Services
+              </Link>
             </li>
-            <li className={btn==="Contact Us"?"text-[#1369aa] relative after:absolute after:left-0 after:-bottom-3 after:w-[100%] after:h-[3px]  after:bg-[#1369aa]":"hover:text-[#1369AA] relative hover:after:absolute hover:after:left-0 hover:after:-bottom-3 hover:after:w-[100%] hover:after:h-[3px]  hover:after:bg-[#1369aa] "}>
-            <Link onClick={handleActive}  to="/Contact">Contact Us</Link>  
+            <li
+              className={
+                btn === "Contact Us"
+                  ? "text-[#1369aa] relative after:absolute after:left-0 after:-bottom-3 after:w-[100%] after:h-[3px]  after:bg-[#1369aa]"
+                  : "hover:text-[#1369AA] relative hover:after:absolute hover:after:left-0 hover:after:-bottom-3 hover:after:w-[100%] hover:after:h-[3px]  hover:after:bg-[#1369aa] "
+              }
+            >
+              <Link onClick={handleActive} to="/Contact">
+                Contact Us
+              </Link>
             </li>
           </ul>
         </div>
@@ -66,12 +105,23 @@ function Navbar() {
         }
       >
         <ul className="flex flex-col content-center items-center gap-4 text-lg cursor-pointer font-semibold pt-10  ">
-          <li className="text-[#1369aa]">Home</li>
-          <li className="hover:text-[#1369AA] ">About</li>
-          <li className="hover:text-[#1369AA]">Services</li>
-          <li className="hover:text-[#1369AA]">Clients</li>
-          <li className="hover:text-[#1369AA]">Career</li>
-          <li className="hover:text-[#1369AA]">Contact Us</li>
+          <li className="text-[#1369aa]">
+            <Link to="/">Home</Link>
+          </li>
+
+          <li className="hover:text-[#1369AA] ">
+            <Link to="/About">About</Link>
+          </li>
+
+          <li className="hover:text-[#1369AA]">
+            <Link to="/Client">Clients</Link>
+          </li>
+          <li className="hover:text-[#1369AA]">
+            <Link to="/Services">Services</Link>
+          </li>
+          <li className="hover:text-[#1369AA]">
+            <Link to="/Contact">Contact Us</Link>
+          </li>
         </ul>
       </div>
     </div>
