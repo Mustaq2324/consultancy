@@ -108,7 +108,7 @@ function Services() {
 
           <button
             onClick={handleApplyClick}
-            className="bg-blue-500 w-full md:w-auto ms-12 text-white px-3 lg:px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300"
+            className="bg-blue-500 w-full md:w-auto lg:ms-12 text-white px-3 lg:px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300"
           >
             Apply Here
           </button>
