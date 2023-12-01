@@ -3,6 +3,7 @@ import img1 from "../../Assest/ortho-png-logo.webp";
 import img2 from "../../Assest/1Point1-Logo.png";
 import img3 from "../../Assest/athenabpo.png";
 import img4 from "../../Assest/logo-42.webp";
+import img5 from "../../Assest/white-PhotoRoom.png-PhotoRoom.png";
 import { FaAnglesRight } from "react-icons/fa6";
 function Clientpage() {
   return (
@@ -159,6 +160,7 @@ function Clientpage() {
           <img className="w-[200px] h-[150px] object-contain" src={img2}/>
           <img className="w-[200px] h-[150px] object-contain rounded" src={img3}/>
           <img className="w-[200px] h-[150px] object-contain rounded" src={img4}/>
+          <img className="w-[200px] h-[150px] object-contain rounded" src={img5}/>
         </div>
       </div>
 <div className="flex flex-col lg:flex-row justify-evenly items-center mt-10 px-4">
