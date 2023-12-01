@@ -114,8 +114,8 @@ function Navbar() {
       <div
         className={
           Sidenav
-            ? "z-[99] w-[100%] h-[250px]  bg-[#E0F4FF] absolute top-[60px] left-0 transition-all duration-1000  lg:hidden "
-            : " h-[250px] w-full bg-[#FFFCF8] absolute -top-[350px]  transition-all duration-1000 lg:hidden"
+            ? "z-[99] w-[100%] h-[300px]  bg-[#E0F4FF] absolute top-[60px] left-0 transition-all duration-1000  lg:hidden "
+            : " h-[300px] w-full bg-[#FFFCF8] absolute -top-[350px]  transition-all duration-1000 lg:hidden"
         }
       >
         <ul className="flex flex-col content-center items-center gap-4 text-lg cursor-pointer font-semibold pt-10  ">
@@ -131,6 +131,12 @@ function Navbar() {
           <li className={
                 btn ==="Clients"?"text-[#1369aa]":"text-black hover:text-[#1369AA] "}>
             <Link  onClick={handleActive} to="/Client">Clients</Link>
+          </li>
+          <li className={
+                btn === "Carrers"?"text-[#1369aa]":"text-black hover:text-[#1369AA]"}>
+           <Link onClick={handleActive} to="/Carrers">
+                Carrers
+              </Link>
           </li>
           <li className={
                 btn ==="Services"?"text-[#1369aa]":"text-black hover:text-[#1369AA] "}>

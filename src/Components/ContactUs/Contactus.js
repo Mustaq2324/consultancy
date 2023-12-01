@@ -53,7 +53,7 @@ function Contactus() {
           </svg>
         </div>
       </div>
-      <div className="mt-10 flex flex-col lg:flex-row justify-evenly gap-6 lg:gap-0 px-4 lg:px-0  ">
+      <div className="mt-10 flex flex-col lg:flex-row justify-evenly gap-6 lg:gap-0 px-4 lg:px-0">
         <div className="flex flex-col justify-center items-center text-center lg:text-start ">
           <span className="text-2xl  font-[poppins] font-bold ">
             How can we help?
