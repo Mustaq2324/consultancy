@@ -9,7 +9,7 @@ const ReviewSection = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto my-8">
+    <div className="max-w-lg mx-auto lg:ms-12 my-8">
       <h2 className="text-2xl font-bold mb-4">Leave a Review</h2>
       <form>
         <div className="flex items-center mb-4">

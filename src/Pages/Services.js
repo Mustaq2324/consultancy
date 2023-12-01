@@ -71,11 +71,11 @@ function Services() {
           </svg>
         </div>
       </div>
-      <div className="mx-4 md:mx-24 px-4 md:px-24">
+      <div className="px-4 flex flex-col items-center">
         <h1 className="text-center font-bold text-lg md:text-2xl mt-12 lg:text-3xl">
           Developing Your Career With Epic!
         </h1>
-        <div className="border-b-2 border-blue-500 w-[540px] border-solid ms-72 p-4"></div>
+        <div className="border-b-2 border-blue-500 w-[540px] border-solid p-4"></div>
       </div>
 
 
@@ -123,8 +123,10 @@ function Services() {
           selectedLocation={selectedLocation}
         />
       )}
-
-      <FAQ />
+<div className="">
+<FAQ />
+</div>
+     
     </div>
   );
 }

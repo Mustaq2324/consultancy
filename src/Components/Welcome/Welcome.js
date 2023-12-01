@@ -3,7 +3,7 @@ import img from "../../Assest/Welcome.jpg"
 function Welcome() {
   return (
     <div className='mt-10 overflow-x-hidden'>
-        <h1 className='text-center text-3xl lg:text-4xl font-[poppins]'>Welcome To Epic <span className='text-[#1369AA]'>Solutions</span></h1>
+        <h1 className='text-center text-3xl lg:text-4xl font-[poppins] px-4'>Welcome To Epic <span className='text-[#1369AA]'>Solutions</span></h1>
        <div className='flex flex-col lg:flex-row lg:mx-4 container px-4 items-center justify-center gap-10  mt-5'>
         <div >
             <img className=' w-[500px] rounded' src={img}/>

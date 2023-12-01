@@ -103,7 +103,7 @@ function Navbar() {
         className={
           Sidenav
             ? "z-[99] w-[100%] h-[250px]  bg-[#E0F4FF] absolute top-[60px] left-0 transition-all duration-1000  lg:hidden "
-            : " h-0    bg-[#FFFCF8] absolute top-[60px]   transition-all duration-1000 lg:hidden"
+            : " h-[250px] w-full bg-[#FFFCF8] absolute -top-[350px]  transition-all duration-1000 lg:hidden"
         }
       >
         <ul className="flex flex-col content-center items-center gap-4 text-lg cursor-pointer font-semibold pt-10  ">
