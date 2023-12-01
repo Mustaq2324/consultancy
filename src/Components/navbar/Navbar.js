@@ -75,6 +75,17 @@ function Navbar() {
             </li>
             <li
               className={
+                btn === "Careers"
+                  ? "text-[#1369aa] relative after:absolute after:left-0 after:-bottom-3 after:w-[100%] after:h-[3px]  after:bg-[#1369aa]"
+                  : "hover:text-[#1369AA] relative hover:after:absolute hover:after:left-0 hover:after:-bottom-3 hover:after:w-[100%] hover:after:h-[3px]  hover:after:bg-[#1369aa] "
+              }
+            >
+              <Link onClick={handleActive} to="/Carrers">
+                Carrers
+              </Link>
+            </li>
+            <li
+              className={
                 btn === "Services"
                   ? "text-[#1369aa] relative after:absolute after:left-0 after:-bottom-3 after:w-[100%] after:h-[3px]  after:bg-[#1369aa]"
                   : "hover:text-[#1369AA] relative hover:after:absolute hover:after:left-0 hover:after:-bottom-3 hover:after:w-[100%] hover:after:h-[3px]  hover:after:bg-[#1369aa] "
@@ -84,6 +95,7 @@ function Navbar() {
                 Services
               </Link>
             </li>
+         
             <li
               className={
                 btn === "Contact Us"
