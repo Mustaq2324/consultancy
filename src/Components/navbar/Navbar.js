@@ -31,7 +31,11 @@ function Navbar() {
   }, []);
 
   return (
+<<<<<<< HEAD
     <div className="flex cursor-pointer ">
+=======
+    <div className="flex sticky top-0 bg-white z-30">
+>>>>>>> aeb3672fcdbddc6220824769a5cc3972f750b891
       <div className="flex justify-between p-4 lg:p-0 z-50 lg:justify-between lg:px-4 text-black items-center w-full">
         <div className="flex lg:justify-center justify-center items-center ">
           <img data-aos="fade-up"

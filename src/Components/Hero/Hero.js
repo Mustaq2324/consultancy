@@ -4,8 +4,11 @@ import icon from "../../../src/Assest/images.png";
 import bg from "../../Assest/bg.jpeg";
 import Services from "../../Pages/Services";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+=======
+>>>>>>> aeb3672fcdbddc6220824769a5cc3972f750b891
 
 export default function App() {
   const [isVisible, setIsVisible] = useState(false);
