@@ -7,11 +7,9 @@ import img3 from "../Assest/3.jpg";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-<<<<<<< HEAD
-const locations = ["Chennai", "Bangalore", "Mumbai", "Telangana", 'Pune', 'Noida', 'Lucknow', 'Hyderabad', 'Gurugram', 'Delhi'];
-=======
+
 const locations = ["Chennai", "Bangalore", "Mumbai", "Telangana",'Pune','Noida','Lucknow','Hyderabad','Gurugram','Delhi'];
->>>>>>> aeb3672fcdbddc6220824769a5cc3972f750b891
+
 
 function Services() {
   const [showApplyForm, setShowApplyForm] = useState(false);
