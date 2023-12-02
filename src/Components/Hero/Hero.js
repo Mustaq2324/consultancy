@@ -4,6 +4,11 @@ import icon from "../../../src/Assest/images.png";
 import bg from "../../Assest/bg.jpeg";
 import Services from "../../Pages/Services";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+=======
+>>>>>>> aeb3672fcdbddc6220824769a5cc3972f750b891
 
 export default function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,6 +35,13 @@ export default function App() {
     };
   }, []);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Set the animation duration
+      once: true, // Set whether animation should only happen once
+    });
+  }, []);
+
   return (
     <div className="overflow-hidden ">
       <div
@@ -40,8 +52,8 @@ export default function App() {
         }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="mx-auto text-center lg:text-start relative z-10">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold  font-[poppins] mb-4 text-gray-300">
+        <div data-aos="zoom-in-left" className="mx-auto text-center lg:text-start relative z-10">
+          <h1  class="text-4xl md:text-5xl lg:text-6xl font-semibold  font-[poppins] mb-4 text-gray-300">
             Embrace a New Journey ✨
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl mb-8 font-[ContrailOne] text-gray-300">
@@ -53,7 +65,7 @@ export default function App() {
             <Link  to="Services">Apply Now</Link>
             </button>
             <button className="px-5 py-3 rounded font-[DMSans] text-xl bg-gray-800 hover:bg-gray-900 hover:text-white duration-300">
-               <Link  to="About"> Learn More</Link>
+               <Link  to="About"> Job Seekers</Link>
             </button>
           </div>
         </div>
