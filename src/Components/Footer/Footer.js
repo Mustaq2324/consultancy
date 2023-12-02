@@ -1,23 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BsChevronDoubleRight, BsTelephoneFill } from "react-icons/bs";
 import { FaMapLocation } from "react-icons/fa6";
 import { GrMail } from "react-icons/gr";
 import { FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 function Footer() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Set the animation duration
+      once: true, // Set whether animation should only happen once
+    });
+  }, []);
   return (
     <div>
-      <footer className="bg-[#8D99AE] ">
+      <footer data-aos="fade-up"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine" className="bg-[#8D99AE] ">
         <div className="mx-auto max-w-screen-xl  py-10 space-y-8 px-4  sm:px-6 lg:space-y-16 lg:px-8">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
               <div>
                 <h5 className="text-2xl">
-                  Epic <span className="text-[#1369AA]">Solution</span>
+                  Epic <span className="text-[#1369AA]">Solutions</span>
                 </h5>
               </div>
 
               <p className="mt-4 max-w-xs text-gray-500">
-                Epic Solution wide end to end Human Resource managment to
+                Epic Solutions wide end to end Human Resource managment to
                 orgnization and help them address their tallent and try to meet
                 candidates expectations through matching them with a desired
                 job.
@@ -107,16 +118,21 @@ function Footer() {
 
                 <ul className="mt-6 space-y-4 text-sm">
                   <li className="flex items-center gap-2">
-                    <BsChevronDoubleRight /> Home
+                    <BsChevronDoubleRight /> 
+                    <Link  to="/">Home</Link>
                   </li>
                   <li className="flex items-center gap-2">
-                    <BsChevronDoubleRight /> About
+                    <BsChevronDoubleRight /> 
+                    <Link  to="About">About</Link>
+
                   </li>
                   <li className="flex items-center gap-2">
-                    <BsChevronDoubleRight /> Services
+                    <BsChevronDoubleRight /> 
+                    <Link  to="Services">Services</Link>
                   </li>
                   <li className="flex items-center gap-2">
-                    <BsChevronDoubleRight /> Contact
+                    <BsChevronDoubleRight /> 
+                    <Link  to="Contact">Contact Us</Link>
                   </li>
                 </ul>
               </div>

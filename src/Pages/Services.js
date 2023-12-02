@@ -1,11 +1,13 @@
 // Services.js
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ApplyForm from "../Components/contact/ApplyForm";
 import img from "../img/1.png";
 import FAQ from "./Faq";
 import img3 from "../Assest/3.jpg";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const locations = ["Chennai", "Bangalore", "Mumbai", "Telangana",'Pune','Noida','Lucknow','Hyderabad','Gurugram','Delhi'];
+const locations = ["Chennai", "Bangalore", "Mumbai", "Telangana", 'Pune', 'Noida', 'Lucknow', 'Hyderabad', 'Gurugram', 'Delhi'];
 
 function Services() {
   const [showApplyForm, setShowApplyForm] = useState(false);
@@ -18,16 +20,27 @@ function Services() {
   const handleLocationClick = (location) => {
     setSelectedLocation(location);
   };
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Set the animation duration
+      once: true, // Set whether animation should only happen once
+    });
+  }, []);
+
   return (
     <div className="overflow-hidden">
       <div className="bg-gradient-to-b from-[#7CB252] to-[#1369AA] h-[450px] lg:h-[400px]  ">
         <div className="flex flex-col-reverse lg:flex-row justify-between lg:gap-2">
-          <div className=" justify-center  lg:ps-10 flex flex-col gap-6">
+          <div
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            className=" justify-center  lg:ps-10 flex flex-col gap-6">
             <h1 className="text-white text-center font-semibold font-[popins] mt-5 lg:mt-0 text-2xl lg:text-[2.8rem]">
               LETS START YOUR CAREERS HERE!
             </h1>
             <p className="text-white mb-10 lg:mb-0 text-center lg: lg:text-start font-[poppins] text-sm lg:text-base lg:w-[750px] lg:ps-10 p-2">
-              Welcome to our Epic Solution, where expertise meets opportunity!
+              Welcome to our Epic , where expertise meets opportunity!
               Join a collaborative team of industry leaders, where your skills
               and insights shape impactful solutions. Explore diverse career
               paths, unlocking the potential to drive positive change for our
@@ -38,6 +51,10 @@ function Services() {
           </div>
 
           <svg
+            data-aos="fade-up"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+
             focusable="false"
             className="hero__honeycom lg:h-[370px] h-[120px] lg:w-[320px] "
             xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +88,11 @@ function Services() {
           </svg>
         </div>
       </div>
-      <div className="px-4 flex flex-col items-center">
+      <div
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      className="px-4 flex flex-col items-center">
         <h1 className="text-center font-bold text-lg md:text-2xl mt-12 lg:text-3xl">
           Developing Your Career With Epic!
         </h1>
@@ -80,7 +101,11 @@ function Services() {
 
 
 
-      <div className="rounded-lg p-6 w-full flex lg:flex-row flex-col justify-evenly lg:mt-16 gap-11">
+      <div
+      data-aos="fade-down"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      className="rounded-lg p-6 w-full flex lg:flex-row flex-col justify-evenly lg:mt-16 gap-11">
         <div className=" ">
           <h1 className="text-2xl md:text-4xl font-bold mb-4 text-blue-600 text-center">
             Services
@@ -94,11 +119,10 @@ function Services() {
               <li
                 key={index}
                 onClick={() => handleLocationClick(location)}
-                className={`cursor-pointer px-3 md:px-4 py-2 m-1 md:m-2 border border-gray-300 rounded ${
-                  selectedLocation === location
+                className={`cursor-pointer px-3 md:px-4 py-2 m-1 md:m-2 border border-gray-300 rounded ${selectedLocation === location
                     ? "bg-blue-500 text-white"
                     : "hover:bg-gray-200"
-                }`}
+                  }`}
               >
                 {location}
               </li>
@@ -123,10 +147,14 @@ function Services() {
           selectedLocation={selectedLocation}
         />
       )}
-<div className="">
-<FAQ />
-</div>
-     
+      <div 
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      className="">
+        <FAQ />
+      </div>
+
     </div>
   );
 }
