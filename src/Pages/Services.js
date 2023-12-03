@@ -8,7 +8,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
-const locations = ["Chennai", "Bangalore", "Mumbai", "Telangana",'Pune','Noida','Lucknow','Hyderabad','Gurugram','Delhi'];
+const locations = ['Chennai', "Bangalore", "Mumbai", "Telangana",'Pune','Noida','Lucknow','Hyderabad','Gurugram','Delhi'];
 
 
 function Services() {
