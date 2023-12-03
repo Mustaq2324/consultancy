@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../../../src/Assest/logo.png";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 function Navbar() {
   const [Sidenav, setSideNav] = useState(false);
   const [btn, setBtn] = useState(null);
@@ -20,23 +22,44 @@ function Navbar() {
     setSideNav(false);
     setBtn(null);
   }
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Set the animation duration
+      once: true, // Set whether animation should only happen once
+    });
+  }, []);
+
   return (
-    <div className="flex  ">
+    <div  className="flex  ">
       <div className="flex justify-between p-4 lg:p-0 z-50 lg:justify-between lg:px-4 text-black items-center w-full">
         <div className="flex lg:justify-center justify-center items-center ">
-          <img
+          <img data-aos="fade-up"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine"
             src={logo}
             className="lg:w-[120px]  object-cover hidden lg:block"
           />
-          <h1 className="font-[Dmsans] font-semibold text-2xl text-black">
+
+
+<Link  to="/"> <h1 data-aos="fade-up"
+    data-aos-offset="50"
+    data-aos-easing="ease-in-sine"
+          className="font-[Dmsans] font-semibold text-2xl text-black">
             Epic <span className="text-[#1369AA]">Solutions</span>
-          </h1>
+          </h1></Link>
+
+
+         
         </div>
         <FaBars className="text-2xl lg:hidden" onClick={handledrop} />
         {/* LapNavbar   */}
 
         <div className="hidden lg:block ">
-          <ul className="flex gap-4 text-lg cursor-pointer font-semibold">
+          <ul data-aos="fade-up"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine"
+          className="flex gap-4 text-lg cursor-pointer font-semibold">
             <li
               className={
                 home
@@ -81,7 +104,7 @@ function Navbar() {
               }
             >
               <Link onClick={handleActive} to="/Carrers">
-                Carrers
+              Careers
               </Link>
             </li>
             <li
